@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+    <title>JS Challenge: DOM, CONDITIONALS, LOGIC</title>
+</head>
+
+<body>
+    <label for="input-field">Try writing something!</label>
+    <input type="text" id="input-field">
+    <button onclick="checkText()">GO!</button>
+    <script>
+        function checkText() {
+            const input = document.getElementById("input-field").value;
+            if (input.trim() === "") {
+                alert("write something!!!");
+            } else if (input.includes("hello")) {
+                document.body.style.backgroundColor = "#0e8bc4"
+            } else if (input.includes("world")) {
+                document.body.style.backgroundColor = "#5c9460";
+            } else if (input.includes("back")) {
+                document.body.style.backgroundColor = "#e0deda";
+            } else {
+                document.body.style.backgroundColor = "#a30400";
+            }
+
+        }
+    </script>
+</body>
+
+</html>
